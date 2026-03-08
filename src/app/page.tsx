@@ -34,7 +34,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto pt-24">
         <div className="animate-fade-in-up opacity-0">
           <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">
-            Shanghai &middot; Empowering Startups
+            Empowering Startups
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
             We help tech startups
@@ -130,11 +130,11 @@ export default function Home() {
               built for builders.
             </h2>
             <p className="text-zinc-400 leading-relaxed text-lg">
-              021Lab is a startup services studio based in Shanghai. The "021"
+              021Lab is a startup services studio. The "021"
               stands for "Zero to One" — the hardest and most exciting leap in
-              building something new. We exist to empower the next generation of
-              tech startups with the tools, community, and expertise they need to
-              go from idea to reality.
+              building something new. But we don&apos;t stop there. From 0 to 1,
+              and from 1 to 100, we empower tech startups with the tools,
+              community, and expertise they need at every stage of growth.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 text-center">
@@ -191,14 +191,8 @@ export default function Home() {
             &copy; {new Date().getFullYear()} 021Lab. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm text-zinc-500">
-            <a href="#" className="hover:text-white transition-colors">
-              Twitter
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              GitHub
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
-              WeChat
+            <a href="https://x.com/021lab45119" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              X
             </a>
           </div>
         </div>
