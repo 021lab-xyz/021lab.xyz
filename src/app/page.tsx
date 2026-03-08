@@ -125,16 +125,16 @@ export default function Home() {
               About Us
             </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
-              Born in Shanghai,
+              From Zero to One,
               <br />
               built for builders.
             </h2>
             <p className="text-zinc-400 leading-relaxed text-lg">
-              021Lab is a startup services studio based in Shanghai. The "021" in
-              our name is Shanghai&apos;s area code — a nod to our roots and the
-              vibrant tech ecosystem we call home. We exist to empower the next
-              generation of tech startups with the tools, community, and expertise
-              they need to succeed.
+              021Lab is a startup services studio based in Shanghai. The "021"
+              stands for "Zero to One" — the hardest and most exciting leap in
+              building something new. We exist to empower the next generation of
+              tech startups with the tools, community, and expertise they need to
+              go from idea to reality.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 text-center">
