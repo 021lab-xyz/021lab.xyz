@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import VideoPlayer from "./VideoPlayer";
 
 export const metadata: Metadata = {
   title: "2026 Solana 技术训练营 — 021Lab",
@@ -239,6 +240,22 @@ export default function BootcampPage() {
         </div>
       </section>
 
+      {/* Videos */}
+      <section id="videos" className="px-6 md:px-12 max-w-7xl mx-auto py-32">
+        <div className="animate-fade-in-up opacity-0 animate-delay-1">
+          <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">
+            Watch
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            Course videos.
+          </h2>
+          <p className="text-zinc-400 mb-12 max-w-xl">
+            Watch lectures and workshops directly — no account required. New videos are published as each session is completed.
+          </p>
+        </div>
+        <VideoPlayer />
+      </section>
+
       {/* About */}
       <section className="px-6 md:px-12 max-w-7xl mx-auto py-32">
         <div className="animate-fade-in-up opacity-0 animate-delay-1">
@@ -464,20 +481,10 @@ export default function BootcampPage() {
               Register on OpenBuild
             </a>
             <a
-              href="https://learnblockchain.cn/video/play/1875?course_id=94"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#videos"
               className="inline-block border border-white/20 px-10 py-4 rounded-full text-sm font-medium hover:bg-white/5 transition-colors"
             >
-              Watch on 登链
-            </a>
-            <a
-              href="https://www.hackquest.io/zh-cn/co-learning/2026-Solana-%E6%8A%80%E6%9C%AF%E8%AE%AD%E7%BB%83%E8%90%A5-S2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border border-white/20 px-10 py-4 rounded-full text-sm font-medium hover:bg-white/5 transition-colors"
-            >
-              Join on HackQuest
+              Watch Videos
             </a>
           </div>
         </div>
