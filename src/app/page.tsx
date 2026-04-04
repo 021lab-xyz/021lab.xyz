@@ -14,6 +14,9 @@ export default function Home() {
             <a href="#about" className="hover:text-white transition-colors">
               About
             </a>
+            <a href="/bootcamp" className="hover:text-white transition-colors">
+              Bootcamp
+            </a>
             <a href="#contact" className="hover:text-white transition-colors">
               Contact
             </a>
