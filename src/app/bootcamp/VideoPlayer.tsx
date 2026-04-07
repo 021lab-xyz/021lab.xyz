@@ -204,18 +204,6 @@ export default function VideoPlayer() {
             })}
           </div>
 
-          {/* Footer */}
-          <div className="px-4 py-3.5 border-t border-white/10">
-            <a
-              href="https://www.hackquest.io/zh-cn/co-learning/2026-Solana-%E6%8A%80%E6%9C%AF%E8%AE%AD%E7%BB%83%E8%90%A5-S2"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between text-xs text-zinc-500 hover:text-zinc-300 transition-colors group"
-            >
-              <span>Full schedule on HackQuest</span>
-              <span className="group-hover:translate-x-0.5 transition-transform">↗</span>
-            </a>
-          </div>
         </div>
       </div>
 

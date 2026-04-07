@@ -167,14 +167,6 @@ export default function BootcampPage() {
               Contact
             </a>
           </div>
-          <a
-            href="https://openbuild.xyz/learn/challenges/2086624241/1774877400"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm border border-white/20 rounded-full px-5 py-2 hover:bg-white hover:text-black transition-all"
-          >
-            Register Now
-          </a>
         </div>
       </nav>
 
@@ -205,14 +197,6 @@ export default function BootcampPage() {
             and built for the next generation of Solana builders.
           </p>
           <div className="mt-12 flex flex-wrap gap-4">
-            <a
-              href="https://openbuild.xyz/learn/challenges/2086624241/1774877400"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-zinc-200 transition-colors"
-            >
-              Join Season 2
-            </a>
             <a
               href="#curriculum"
               className="border border-white/20 px-8 py-3.5 rounded-full text-sm font-medium hover:bg-white/5 transition-colors"
@@ -472,14 +456,6 @@ export default function BootcampPage() {
             real projects, and connect with the Solana ecosystem.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://openbuild.xyz/learn/challenges/2086624241/1774877400"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-white text-black px-10 py-4 rounded-full text-sm font-medium hover:bg-zinc-200 transition-colors"
-            >
-              Register on OpenBuild
-            </a>
             <a
               href="#videos"
               className="inline-block border border-white/20 px-10 py-4 rounded-full text-sm font-medium hover:bg-white/5 transition-colors"
