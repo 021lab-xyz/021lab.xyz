@@ -28,17 +28,35 @@ html {
   background: linear-gradient(90deg, #06b6d4, #3b82f6, #a855f7, #ef4444, #f59e0b);
 }
 
-/* Hover card effect */
+/* Subtle dot grid for hero */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+}
+
+/* Service cards */
 .service-card {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-4px);
 }
 
-/* Fade in animation */
+/* Hackathon event cards */
+.hackathon-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hackathon-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;

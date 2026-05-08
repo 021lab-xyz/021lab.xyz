@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "021Lab — Empowering Tech Startups",
+  title: "021Lab — The AI + Web3 Hackathon Platform",
   description:
-    "021Lab helps tech startups grow through events, hackathons, incubation, custom merch, and marketing.",
+    "021Lab designs and runs hackathons for AI and Web3 ecosystems. 50+ hackathons, 5,000+ builders, 30+ projects launched.",
 };
 
 export default function RootLayout({
