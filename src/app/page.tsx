@@ -53,7 +53,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto pt-24">
         <div className="dot-grid absolute inset-0 pointer-events-none" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-cyan-500/8 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-green-500/8 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative animate-fade-in-up opacity-0">
           <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">
@@ -61,7 +61,7 @@ export default function Home() {
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
             The Hackathon Platform
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-400 to-green-400">
               for AI + Web3.
             </span>
           </h1>
@@ -113,7 +113,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-6">
           <div className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
             <div className="mb-5">
-              <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" />
               </svg>
             </div>
@@ -125,7 +125,7 @@ export default function Home() {
 
           <div className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
             <div className="mb-5">
-              <svg className="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
@@ -137,7 +137,7 @@ export default function Home() {
 
           <div className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
             <div className="mb-5">
-              <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
               </svg>
             </div>
@@ -156,9 +156,9 @@ export default function Home() {
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="hackathon-card relative rounded-2xl p-8 md:p-10 overflow-hidden border border-white/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-600/5" />
             <div className="relative">
-              <p className="text-xs text-cyan-400 uppercase tracking-widest mb-2">Ecosystem Partner</p>
+              <p className="text-xs text-green-400 uppercase tracking-widest mb-2">Ecosystem Partner</p>
               <h3 className="text-xl font-semibold mb-5">HashKey Chain Horizon Hackathon</h3>
               <div className="flex flex-wrap gap-2 mb-6">
                 {["DeFi", "PayFi", "AI", "ZKID"].map(track => (
@@ -180,9 +180,9 @@ export default function Home() {
           </div>
 
           <div className="hackathon-card relative rounded-2xl p-8 md:p-10 overflow-hidden border border-white/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-600/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-600/5" />
             <div className="relative">
-              <p className="text-xs text-purple-400 uppercase tracking-widest mb-2">Co-Organizer</p>
+              <p className="text-xs text-emerald-400 uppercase tracking-widest mb-2">Co-Organizer</p>
               <h3 className="text-xl font-semibold mb-5">Solana Mini Hacker House Singapore</h3>
               <div className="flex flex-wrap gap-2 mb-6">
                 {["Singapore", "Apr 28–29, 2026", "In-Person"].map(tag => (
@@ -212,7 +212,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">The Builder Network</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
               5,000+ builders
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400">
                 across AI + Web3.
               </span>
             </h2>
@@ -251,12 +251,12 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="px-6 md:px-12 max-w-7xl mx-auto py-32">
         <div className="border border-white/10 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5" />
+          <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-emerald-500/5" />
           <div className="relative">
             <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Get Started</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
               Ready to run your
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500"> next hackathon?</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400"> next hackathon?</span>
             </h2>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
               Tell us about your project. We&apos;ll handle the rest.
