@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CaseStudies from "@/components/CaseStudies";
 
 export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -149,61 +150,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Past Hackathons */}
-      <section id="hackathons" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
-        <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</p>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16">Past Hackathons</h2>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="hackathon-card relative rounded-2xl p-8 md:p-10 overflow-hidden border border-white/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-600/5" />
-            <div className="relative">
-              <p className="text-xs text-green-400 uppercase tracking-widest mb-2">Ecosystem Partner</p>
-              <h3 className="text-xl font-semibold mb-5">HashKey Chain Horizon Hackathon</h3>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["DeFi", "PayFi", "AI", "ZKID"].map(track => (
-                  <span key={track} className="text-xs border border-white/10 rounded-full px-3 py-1 text-zinc-400">{track}</span>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <div className="text-2xl font-bold">$40,000</div>
-                  <div className="text-zinc-500 text-xs mt-0.5">Prize Pool (USDT)</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold">4</div>
-                  <div className="text-zinc-500 text-xs mt-0.5">Tracks</div>
-                </div>
-              </div>
-              <p className="text-xs text-zinc-600 mt-5">With HSK Chain · DoraHacks · AWS Cloud</p>
-            </div>
-          </div>
-
-          <div className="hackathon-card relative rounded-2xl p-8 md:p-10 overflow-hidden border border-white/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-green-600/5" />
-            <div className="relative">
-              <p className="text-xs text-emerald-400 uppercase tracking-widest mb-2">Co-Organizer</p>
-              <h3 className="text-xl font-semibold mb-5">Solana Mini Hacker House Singapore</h3>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["Singapore", "Apr 28–29, 2026", "In-Person"].map(tag => (
-                  <span key={tag} className="text-xs border border-white/10 rounded-full px-3 py-1 text-zinc-400">{tag}</span>
-                ))}
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <div className="text-2xl font-bold">In-Person</div>
-                  <div className="text-zinc-500 text-xs mt-0.5">Format</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold">2026</div>
-                  <div className="text-zinc-500 text-xs mt-0.5">Year</div>
-                </div>
-              </div>
-              <p className="text-xs text-zinc-600 mt-5">With Solana · SafePal · HackQuest · OpenBuild</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CaseStudies />
 
       {/* Builder Network */}
       <section id="builders" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
