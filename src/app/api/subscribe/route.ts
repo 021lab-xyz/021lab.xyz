@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Server misconfigured" }, { status: 500 });
   }
 
-  const { name, email, focusArea } = await req.json();
+  const { name, email, telegram, twitter, region, primaryFocus } = await req.json();
 
   if (!email || !email.includes("@")) {
     return NextResponse.json({ error: "Valid email required" }, { status: 400 });
@@ -25,7 +25,10 @@ export async function POST(req: NextRequest) {
       fields: {
         Name: name || "",
         Email: email,
-        "Focus Area": focusArea || "",
+        "Telegram Handle": telegram || "",
+        "Twitter / X": twitter || "",
+        Region: region || "",
+        "Primary Focus": primaryFocus || "",
         Source: "website",
         Subscribed: true,
       },
