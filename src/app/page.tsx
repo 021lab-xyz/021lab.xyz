@@ -252,7 +252,7 @@ export default function Home() {
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">About</motion.p>
           <motion.p variants={fadeUp} className="text-zinc-300 text-lg leading-relaxed">
-            021Lab is a small team that designs and runs hackathons for AI and Web3 ecosystems — end to end, from track structure to demo day. We&apos;ve organized flagship events with HashKey Chain and Solana across Hong Kong and Singapore, and built a 5,000-strong builder community across Asia. We work with protocols, funds, and developer communities who want to find and back serious builders.
+            021Lab is a lean, cross-timezone team — based across Asia and North America — that designs and runs hackathons for AI and Web3 ecosystems end to end. We&apos;ve operated events across multiple countries, built a 5,000-strong builder community spanning both regions, and move fast enough to go from brief to demo day without the usual overhead. We know the ecosystem, so clients don&apos;t have to explain it to us.
           </motion.p>
         </motion.div>
       </section>
