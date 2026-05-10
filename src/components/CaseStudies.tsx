@@ -7,6 +7,7 @@ const cases = [
     roleColor: "text-green-400",
     date: "April 2026",
     location: "Hong Kong",
+    recapUrl: "https://x.com/i/status/2049006918107341292",
     title: "HashKey Chain Horizon Hackathon",
     subtitle: "DeFi · PayFi · AI · ZKID",
     description:
@@ -36,6 +37,7 @@ const cases = [
     roleColor: "text-emerald-400",
     date: "April 28–29, 2026",
     location: "Singapore",
+    recapUrl: "https://x.com/i/status/2053259310625403384",
     title: "Solar Mini Hacker House × 021Lab",
     subtitle: "Singapore 2026",
     description:
@@ -78,14 +80,29 @@ export default function CaseStudies() {
           <div key={c.id} className="border border-white/10 rounded-3xl overflow-hidden">
 
             {/* Header */}
-            <div className="px-8 md:px-10 pt-8 pb-6 flex flex-wrap items-center gap-3">
-              <span className={`text-xs font-medium uppercase tracking-widest ${c.roleColor}`}>
-                {c.role}
-              </span>
-              <span className="text-zinc-700">·</span>
-              <span className="text-xs text-zinc-500">{c.date}</span>
-              <span className="text-zinc-700">·</span>
-              <span className="text-xs text-zinc-500">{c.location}</span>
+            <div className="px-8 md:px-10 pt-8 pb-6 flex flex-wrap items-center justify-between gap-3">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className={`text-xs font-medium uppercase tracking-widest ${c.roleColor}`}>
+                  {c.role}
+                </span>
+                <span className="text-zinc-700">·</span>
+                <span className="text-xs text-zinc-500">{c.date}</span>
+                <span className="text-zinc-700">·</span>
+                <span className="text-xs text-zinc-500">{c.location}</span>
+              </div>
+              {c.recapUrl && (
+                <a
+                  href={c.recapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-xs text-zinc-400 border border-white/10 rounded-full px-4 py-1.5 hover:border-white/25 hover:text-white transition-all"
+                >
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  Watch Recap
+                </a>
+              )}
             </div>
 
             {/* Title */}
