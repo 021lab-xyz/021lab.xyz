@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const cases = [
   {
@@ -20,11 +23,32 @@ const cases = [
       { value: "4", label: "Tracks" },
     ],
     tracks: ["DeFi", "PayFi", "AI", "ZKID"],
+    // 5 grid photos: most people, demo, socializing, audience, working
     photos: [
       { src: "/images/hashkey/hk-06.jpg", alt: "Teams at HashKey Horizon Hackathon" },
-      { src: "/images/hashkey/hk-04.jpg", alt: "Winner teams at HashKey Horizon Hackathon" },
-      { src: "/images/hashkey/hk-14.jpg", alt: "Participants at HashKey Horizon Hackathon" },
+      { src: "/images/hashkey/hk-15.jpg", alt: "Teams presenting on stage at Demo Day" },
+      { src: "/images/hashkey/hk-13.jpg", alt: "Networking at HashKey Horizon Hackathon" },
       { src: "/images/hashkey/hk-01.jpg", alt: "Audience watching demo day presentations" },
+      { src: "/images/hashkey/hk-02.jpg", alt: "Builders collaborating on their project" },
+    ],
+    allPhotos: [
+      { src: "/images/hashkey/hk-01.jpg", alt: "Audience at HashKey Horizon" },
+      { src: "/images/hashkey/hk-02.jpg", alt: "Builders collaborating" },
+      { src: "/images/hashkey/hk-03.jpg", alt: "Presenter on stage" },
+      { src: "/images/hashkey/hk-04.jpg", alt: "Winner teams" },
+      { src: "/images/hashkey/hk-05.jpg", alt: "Teams at HashKey Horizon" },
+      { src: "/images/hashkey/hk-06.jpg", alt: "Group photo" },
+      { src: "/images/hashkey/hk-07.jpg", alt: "Attendees" },
+      { src: "/images/hashkey/hk-08.jpg", alt: "Audience" },
+      { src: "/images/hashkey/hk-09.jpg", alt: "Presentation" },
+      { src: "/images/hashkey/hk-10.jpg", alt: "Demo Day full room" },
+      { src: "/images/hashkey/hk-11.jpg", alt: "Builders" },
+      { src: "/images/hashkey/hk-12.jpg", alt: "Team working" },
+      { src: "/images/hashkey/hk-13.jpg", alt: "Networking" },
+      { src: "/images/hashkey/hk-14.jpg", alt: "Teams with props" },
+      { src: "/images/hashkey/hk-15.jpg", alt: "Stage presentation" },
+      { src: "/images/hashkey/hk-16.jpg", alt: "Presenter" },
+      { src: "/images/hashkey/hk-17.jpg", alt: "AWS speaker" },
     ],
     partners: [
       { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false },
@@ -53,11 +77,31 @@ const cases = [
       { value: "2", label: "Days" },
     ],
     tracks: ["DeFi", "RWA", "Consumer Apps", "Stablecoins", "Infrastructure", "Open"],
+    // 5 grid photos: most people, demo, socializing, audience, working
     photos: [
       { src: "/images/solana/sol-09.jpg", alt: "Builders at Solar Mini Hacker House Singapore" },
-      { src: "/images/solana/sol-13.jpg", alt: "Group photo at Solar Mini Hacker House" },
+      { src: "/images/solana/sol-05.jpg", alt: "Demo presentation at Solar Mini Hacker House" },
       { src: "/images/solana/sol-15.jpg", alt: "Networking at Solar Mini Hacker House" },
       { src: "/images/solana/sol-10.jpg", alt: "Full audience at Solar Mini Hacker House" },
+      { src: "/images/solana/sol-13.jpg", alt: "Group photo at Solar Mini Hacker House" },
+    ],
+    allPhotos: [
+      { src: "/images/solana/sol-01.jpg", alt: "Networking" },
+      { src: "/images/solana/sol-02.jpg", alt: "Networking" },
+      { src: "/images/solana/sol-03.jpg", alt: "Presentation" },
+      { src: "/images/solana/sol-04.jpg", alt: "Presentation" },
+      { src: "/images/solana/sol-05.jpg", alt: "Demo day" },
+      { src: "/images/solana/sol-06.jpg", alt: "Presenter" },
+      { src: "/images/solana/sol-07.jpg", alt: "Networking" },
+      { src: "/images/solana/sol-08.jpg", alt: "Organizer team" },
+      { src: "/images/solana/sol-09.jpg", alt: "Group photo" },
+      { src: "/images/solana/sol-10.jpg", alt: "Audience" },
+      { src: "/images/solana/sol-11.jpg", alt: "Networking" },
+      { src: "/images/solana/sol-12.jpg", alt: "Group photo" },
+      { src: "/images/solana/sol-13.jpg", alt: "Closing group photo" },
+      { src: "/images/solana/sol-14.jpg", alt: "Networking" },
+      { src: "/images/solana/sol-15.jpg", alt: "Community networking" },
+      { src: "/images/solana/sol-16.jpg", alt: "Presenter with brand banner" },
     ],
     partners: [
       { name: "Solana", logo: "/logos/solana.svg", invert: false },
@@ -71,148 +115,208 @@ const cases = [
   },
 ];
 
-export default function CaseStudies() {
+type Case = typeof cases[0];
+
+function Lightbox({ c, onClose }: { c: Case; onClose: () => void }) {
   return (
-    <section id="hackathons" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
-      <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</p>
-      <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">From Zero to Demo</h2>
-      <p className="text-zinc-400 text-lg max-w-2xl mb-20">
-        Every hackathon we run is a full production. Here&apos;s the work.
-      </p>
-
-      <div className="flex flex-col gap-20">
-        {cases.map((c) => (
-          <div key={c.id} className="border border-white/10 rounded-3xl overflow-hidden">
-
-            {/* Header */}
-            <div className="px-8 md:px-10 pt-8 pb-6 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className={`text-xs font-medium uppercase tracking-widest ${c.roleColor}`}>
-                  {c.role}
-                </span>
-                <span className="text-zinc-700">·</span>
-                <span className="text-xs text-zinc-500">{c.date}</span>
-                <span className="text-zinc-700">·</span>
-                <span className="text-xs text-zinc-500">{c.location}</span>
-              </div>
-              {c.recapUrl && (
-                <a
-                  href={c.recapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs text-zinc-400 border border-white/10 rounded-full px-4 py-1.5 hover:border-white/25 hover:text-white transition-all"
-                >
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                  Watch Recap
-                </a>
-              )}
+    <div
+      className="fixed inset-0 z-50 bg-black/95 overflow-y-auto"
+      onClick={onClose}
+    >
+      <div
+        className="max-w-7xl mx-auto px-4 py-8"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h3 className="text-lg font-semibold">{c.title}</h3>
+            <p className="text-zinc-500 text-sm">{c.allPhotos.length} photos</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-zinc-400 hover:text-white hover:border-white/40 transition-all text-xl"
+          >
+            ×
+          </button>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+          {c.allPhotos.map((photo, i) => (
+            <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-300"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
             </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
-            {/* Title */}
-            <div className="px-8 md:px-10 pb-8">
-              <h3 className="text-2xl md:text-3xl font-bold tracking-tight">{c.title}</h3>
-              <p className="text-zinc-500 text-sm mt-1">{c.subtitle}</p>
-            </div>
+export default function CaseStudies() {
+  const [activeGallery, setActiveGallery] = useState<Case | null>(null);
 
-            {/* Hero image + details — split on desktop */}
-            <div className="grid md:grid-cols-[3fr_2fr]">
+  return (
+    <>
+      <section id="hackathons" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
+        <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</p>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">From Zero to Demo</h2>
+        <p className="text-zinc-400 text-lg max-w-2xl mb-20">
+          Every hackathon we run is a full production. Here&apos;s the work.
+        </p>
 
-              {/* Hero image */}
-              <div className="relative aspect-[4/3] md:aspect-auto">
-                <Image
-                  src={c.heroImage.src}
-                  alt={c.heroImage.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                />
+        <div className="flex flex-col gap-20">
+          {cases.map((c) => (
+            <div key={c.id} className="border border-white/10 rounded-3xl overflow-hidden">
+
+              {/* Header */}
+              <div className="px-8 md:px-10 pt-8 pb-6 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className={`text-xs font-medium uppercase tracking-widest ${c.roleColor}`}>
+                    {c.role}
+                  </span>
+                  <span className="text-zinc-700">·</span>
+                  <span className="text-xs text-zinc-500">{c.date}</span>
+                  <span className="text-zinc-700">·</span>
+                  <span className="text-xs text-zinc-500">{c.location}</span>
+                </div>
+                {c.recapUrl && (
+                  <a
+                    href={c.recapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-xs text-zinc-400 border border-white/10 rounded-full px-4 py-1.5 hover:border-white/25 hover:text-white transition-all"
+                  >
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    Watch Recap
+                  </a>
+                )}
               </div>
 
-              {/* Details panel */}
-              <div className="bg-white/[0.02] border-l border-white/5 p-8 md:p-10 flex flex-col justify-between">
+              {/* Title */}
+              <div className="px-8 md:px-10 pb-8">
+                <h3 className="text-2xl md:text-3xl font-bold tracking-tight">{c.title}</h3>
+                <p className="text-zinc-500 text-sm mt-1">{c.subtitle}</p>
+              </div>
 
-                {/* Stats */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  {c.stats.map((s) => (
-                    <div key={s.label} className="border border-white/10 rounded-xl p-4">
-                      <div className="text-2xl font-bold text-white">{s.value}</div>
-                      <div className="text-zinc-500 text-xs mt-0.5">{s.label}</div>
-                    </div>
-                  ))}
+              {/* Hero image + details */}
+              <div className="grid md:grid-cols-[3fr_2fr]">
+                <div className="relative aspect-[4/3] md:aspect-auto">
+                  <Image
+                    src={c.heroImage.src}
+                    alt={c.heroImage.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 60vw"
+                  />
                 </div>
 
-                {/* Description */}
-                <p className="text-zinc-400 text-sm leading-relaxed mb-6">{c.description}</p>
-
-                {/* Tracks */}
-                <div className="mb-6">
-                  <p className="text-xs text-zinc-600 uppercase tracking-widest mb-3">Tracks</p>
-                  <div className="flex flex-wrap gap-2">
-                    {c.tracks.map((t) => (
-                      <span
-                        key={t}
-                        className="text-xs border border-white/10 rounded-full px-3 py-1 text-zinc-400"
-                      >
-                        {t}
-                      </span>
+                <div className="bg-white/[0.02] border-l border-white/5 p-8 md:p-10 flex flex-col justify-between">
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    {c.stats.map((s) => (
+                      <div key={s.label} className="border border-white/10 rounded-xl p-4">
+                        <div className="text-2xl font-bold text-white">{s.value}</div>
+                        <div className="text-zinc-500 text-xs mt-0.5">{s.label}</div>
+                      </div>
                     ))}
                   </div>
-                </div>
 
-                {/* Partners */}
-                <div>
-                  <p className="text-xs text-zinc-600 uppercase tracking-widest mb-3">Partners</p>
-                  <div className="flex flex-wrap items-center gap-4">
-                    {c.partners.map((p) =>
-                      p.logo ? (
-                        <div key={p.name} className="h-6 flex items-center">
-                          <img
-                            src={p.logo}
-                            alt={p.name}
-                            className="h-full w-auto object-contain max-w-[80px]"
-                            style={{
-                              filter: p.invert
-                                ? "brightness(0) invert(1)"
-                                : undefined,
-                              opacity: 0.8,
-                            }}
-                          />
-                        </div>
-                      ) : (
-                        <span
-                          key={p.name}
-                          className="text-xs border border-white/15 rounded-full px-3 py-1 text-zinc-300 font-medium"
-                        >
-                          {p.name}
+                  <p className="text-zinc-400 text-sm leading-relaxed mb-6">{c.description}</p>
+
+                  <div className="mb-6">
+                    <p className="text-xs text-zinc-600 uppercase tracking-widest mb-3">Tracks</p>
+                    <div className="flex flex-wrap gap-2">
+                      {c.tracks.map((t) => (
+                        <span key={t} className="text-xs border border-white/10 rounded-full px-3 py-1 text-zinc-400">
+                          {t}
                         </span>
-                      )
-                    )}
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-zinc-600 uppercase tracking-widest mb-3">Partners</p>
+                    <div className="flex flex-wrap items-center gap-4">
+                      {c.partners.map((p) =>
+                        p.logo ? (
+                          <div key={p.name} className="h-6 flex items-center">
+                            <img
+                              src={p.logo}
+                              alt={p.name}
+                              className="h-full w-auto object-contain max-w-[80px]"
+                              style={{
+                                filter: p.invert ? "brightness(0) invert(1)" : undefined,
+                                opacity: 0.8,
+                              }}
+                            />
+                          </div>
+                        ) : (
+                          <span key={p.name} className="text-xs border border-white/15 rounded-full px-3 py-1 text-zinc-300 font-medium">
+                            {p.name}
+                          </span>
+                        )
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Photo grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4">
-              {c.photos.map((photo, i) => (
-                <div key={i} className="relative aspect-square border-t border-white/5 first:border-l-0 overflow-hidden group">
+              {/* Photo grid — first photo larger (most people), then 4 smaller */}
+              <div className="grid grid-cols-2 md:grid-cols-3 border-t border-white/5">
+                {/* First photo: full width mobile, spans 2 rows on desktop */}
+                <div className="col-span-2 md:col-span-1 md:[grid-row:span_2] relative aspect-[16/9] md:aspect-auto overflow-hidden group">
                   <Image
-                    src={photo.src}
-                    alt={photo.alt}
+                    src={c.photos[0].src}
+                    alt={c.photos[0].alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 50vw, 25vw"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>
-              ))}
-            </div>
 
-          </div>
-        ))}
-      </div>
-    </section>
+                {/* Photos 2–5 */}
+                {c.photos.slice(1).map((photo, i) => (
+                  <div key={i} className="relative aspect-square overflow-hidden group border-t border-white/5 md:border-t-0 md:border-l border-white/5">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                  </div>
+                ))}
+              </div>
+
+              {/* View all photos */}
+              <div className="px-8 md:px-10 py-4 border-t border-white/5 flex justify-end">
+                <button
+                  onClick={() => setActiveGallery(c)}
+                  className="text-xs text-zinc-500 hover:text-white transition-colors flex items-center gap-1.5"
+                >
+                  View all {c.allPhotos.length} photos
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {activeGallery && (
+        <Lightbox c={activeGallery} onClose={() => setActiveGallery(null)} />
+      )}
+    </>
   );
 }
