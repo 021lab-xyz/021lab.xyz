@@ -2,6 +2,12 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
 
 const cases = [
   {
@@ -163,15 +169,29 @@ export default function CaseStudies() {
   return (
     <>
       <section id="hackathons" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
-        <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</p>
-        <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">From Zero to Demo</h2>
-        <p className="text-zinc-400 text-lg max-w-2xl mb-20">
-          Every hackathon we run is a full production. Here&apos;s the work.
-        </p>
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={{ hidden: {}, show: { transition: { staggerChildren: 0.08 } } }}
+        >
+          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</motion.p>
+          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-6">From Zero to Demo</motion.h2>
+          <motion.p variants={fadeUp} className="text-zinc-400 text-lg max-w-2xl mb-20">
+            Every hackathon we run is a full production. Here&apos;s the work.
+          </motion.p>
+        </motion.div>
 
         <div className="flex flex-col gap-20">
-          {cases.map((c) => (
-            <div key={c.id} className="border border-white/10 rounded-3xl overflow-hidden">
+          {cases.map((c, idx) => (
+            <motion.div
+              key={c.id}
+              className="border border-white/10 rounded-3xl overflow-hidden"
+              initial={{ opacity: 0, y: 32 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.25, 0.4, 0.25, 1] }}
+            >
 
               {/* Header */}
               <div className="px-8 md:px-10 pt-8 pb-6 flex flex-wrap items-center justify-between gap-3">
@@ -296,7 +316,7 @@ export default function CaseStudies() {
                 </button>
               </div>
 
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>

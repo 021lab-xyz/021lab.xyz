@@ -1,7 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import CaseStudies from "@/components/CaseStudies";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 22 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+};
+
+const stagger: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.09 } },
+};
 
 export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -56,20 +67,25 @@ export default function Home() {
         <div className="dot-grid absolute inset-0 pointer-events-none" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-green-500/8 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative animate-fade-in-up opacity-0">
-          <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">
-            AI + Web3 · Hackathon Platform
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
-            The Hackathon Platform
+        <motion.div
+          className="relative"
+          variants={stagger}
+          initial="hidden"
+          animate="show"
+        >
+          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">
+            AI + Web3 · Hackathon Studio
+          </motion.p>
+          <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
+            We Build Hackathons
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-400 to-green-400">
               for AI + Web3.
             </span>
-          </h1>
-          <p className="mt-8 text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            We design and run hackathons that launch the next generation of builders — and we&apos;re building the infrastructure to do it at scale.
-          </p>
-          <div className="mt-12 flex flex-wrap gap-4">
+          </motion.h1>
+          <motion.p variants={fadeUp} className="mt-8 text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
+            021Lab designs and runs hackathons end to end — from track structure and submissions to demo day and prizes.
+          </motion.p>
+          <motion.div variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
             <a
               href="#contact"
               className="bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-zinc-200 transition-colors"
@@ -82,61 +98,78 @@ export default function Home() {
             >
               Join as a Builder
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Stats Strip */}
-      <div className="border-y border-white/5 bg-white/[0.02]">
+      <motion.div
+        className="border-y border-white/5 bg-white/[0.02]"
+        variants={stagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 grid grid-cols-3 gap-4 text-center">
-          <div>
+          <motion.div variants={fadeUp}>
             <div className="text-3xl md:text-4xl font-bold">50+</div>
-            <div className="text-zinc-500 text-xs md:text-sm mt-1">Hackathons</div>
-          </div>
-          <div className="border-x border-white/5">
+            <div className="text-zinc-500 text-xs md:text-sm mt-1">Events</div>
+          </motion.div>
+          <motion.div variants={fadeUp} className="border-x border-white/5">
             <div className="text-3xl md:text-4xl font-bold">5,000+</div>
             <div className="text-zinc-500 text-xs md:text-sm mt-1">Builders</div>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={fadeUp}>
             <div className="text-3xl md:text-4xl font-bold">30+</div>
             <div className="text-zinc-500 text-xs md:text-sm mt-1">Projects Launched</div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* What We Do */}
       <section id="services" className="px-6 md:px-12 max-w-7xl mx-auto py-32">
-        <div className="animate-fade-in-up opacity-0 animate-delay-1">
-          <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">What We Do</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-16">Hackathon Infrastructure</h2>
-        </div>
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
+          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">What We Do</motion.p>
+          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-16">How We Work</motion.h2>
+        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
+        <motion.div
+          className="grid md:grid-cols-3 gap-6"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+        >
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
             <div className="mb-5">
               <svg className="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Full-Service Hackathon</h3>
+            <h3 className="text-xl font-semibold mb-3">Full-Service Operations</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              End-to-end design, operations, marketing, judging, and prizes. You bring the vision — we handle everything else.
+              We handle the entire event — structure, submissions, marketing, judge coordination, and day-of operations. You define the goal; we deliver the hackathon.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
             <div className="mb-5">
               <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Developer Distribution</h3>
+            <h3 className="text-xl font-semibold mb-3">Builder Distribution</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              Tap into 5,000+ AI and Web3 builders across our community network. Your hackathon reaches the right people — not just anyone.
+              We bring 5,000+ AI and Web3 builders from our own community. Your hackathon reaches real developers — not a generic mailing list.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
             <div className="mb-5">
               <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -146,8 +179,8 @@ export default function Home() {
             <p className="text-zinc-400 leading-relaxed text-sm">
               We structure your tracks, judging criteria, and prize flow to attract serious builders and produce projects that ship beyond the event.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </section>
 
       <CaseStudies />
@@ -155,49 +188,84 @@ export default function Home() {
       {/* Builder Network */}
       <section id="builders" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">The Builder Network</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+          >
+            <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">The Builder Network</motion.p>
+            <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-8">
               5,000+ builders
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400">
                 across AI + Web3.
               </span>
-            </h2>
-            <p className="text-zinc-400 leading-relaxed text-lg mb-8">
-              Behind every hackathon we run is a curated community of developers, founders, and researchers. When you run a hackathon with 021Lab, this is the audience you reach.
-            </p>
-            <a
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-zinc-400 leading-relaxed text-lg mb-8">
+              Behind every hackathon we run is a curated community of developers, founders, and researchers across Asia. When you run a hackathon with 021Lab, this is the audience you reach.
+            </motion.p>
+            <motion.a
+              variants={fadeUp}
               href="mailto:hello@021lab.xyz?subject=Join the Builder Network"
               className="inline-block border border-white/20 px-7 py-3 rounded-full text-sm font-medium hover:bg-white/5 transition-colors"
             >
               Join the Builder Network →
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
-          <div id="about" className="grid grid-cols-2 gap-4 text-center">
-            <div className="border border-white/10 rounded-2xl p-8">
+          <motion.div
+            id="about"
+            className="grid grid-cols-2 gap-4 text-center"
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-60px" }}
+          >
+            <motion.div variants={fadeUp} className="border border-white/10 rounded-2xl p-8">
               <div className="text-4xl font-bold">50+</div>
-              <div className="text-zinc-500 text-sm mt-2">Hackathons Run</div>
-            </div>
-            <div className="border border-white/10 rounded-2xl p-8">
+              <div className="text-zinc-500 text-sm mt-2">Events Run</div>
+            </motion.div>
+            <motion.div variants={fadeUp} className="border border-white/10 rounded-2xl p-8">
               <div className="text-4xl font-bold">5K+</div>
               <div className="text-zinc-500 text-sm mt-2">Builders</div>
-            </div>
-            <div className="border border-white/10 rounded-2xl p-8">
+            </motion.div>
+            <motion.div variants={fadeUp} className="border border-white/10 rounded-2xl p-8">
               <div className="text-4xl font-bold">30+</div>
               <div className="text-zinc-500 text-sm mt-2">Projects Launched</div>
-            </div>
-            <div className="border border-white/10 rounded-2xl p-8">
+            </motion.div>
+            <motion.div variants={fadeUp} className="border border-white/10 rounded-2xl p-8">
               <div className="text-2xl font-bold leading-tight">AI +<br />Web3</div>
               <div className="text-zinc-500 text-sm mt-2">Focus Areas</div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
+      </section>
+
+      {/* About */}
+      <section className="px-6 md:px-12 max-w-7xl mx-auto pb-32 border-t border-white/5 pt-20">
+        <motion.div
+          className="max-w-2xl"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+        >
+          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">About</motion.p>
+          <motion.p variants={fadeUp} className="text-zinc-300 text-lg leading-relaxed">
+            021Lab is a small team that designs and runs hackathons for AI and Web3 ecosystems — end to end, from track structure to demo day. We&apos;ve organized flagship events with HashKey Chain and Solana across Hong Kong and Singapore, and built a 5,000-strong builder community across Asia. We work with protocols, funds, and developer communities who want to find and back serious builders.
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* Contact */}
       <section id="contact" className="px-6 md:px-12 max-w-7xl mx-auto py-32">
-        <div className="border border-white/10 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+        <motion.div
+          className="border border-white/10 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }}
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-transparent to-emerald-500/5" />
           <div className="relative">
             <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Get Started</p>
@@ -215,7 +283,7 @@ export default function Home() {
               hello@021lab.xyz
             </a>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Footer */}
