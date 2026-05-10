@@ -267,29 +267,16 @@ export default function CaseStudies() {
                 </div>
               </div>
 
-              {/* Photo grid — first photo larger (most people), then 4 smaller */}
-              <div className="grid grid-cols-2 md:grid-cols-3 border-t border-white/5">
-                {/* First photo: full width mobile, spans 2 rows on desktop */}
-                <div className="col-span-2 md:col-span-1 md:row-span-2 relative aspect-[16/9] md:aspect-auto overflow-hidden group">
-                  <Image
-                    src={c.photos[0].src}
-                    alt={c.photos[0].alt}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-                </div>
-
-                {/* Photos 2–5 */}
-                {c.photos.slice(1).map((photo, i) => (
-                  <div key={i} className="relative aspect-square overflow-hidden group border-t border-white/5 md:border-t-0 md:border-l border-white/5">
+              {/* Photo strip — 4 equal photos below the hero */}
+              <div className="grid grid-cols-2 md:grid-cols-4 border-t border-white/5">
+                {c.photos.slice(0, 4).map((photo, i) => (
+                  <div key={i} className="relative aspect-square overflow-hidden group border-l border-white/5 first:border-l-0">
                     <Image
                       src={photo.src}
                       alt={photo.alt}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 50vw, 25vw"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                   </div>
