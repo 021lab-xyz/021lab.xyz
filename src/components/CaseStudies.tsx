@@ -268,15 +268,15 @@ export default function CaseStudies() {
               </div>
 
               {/* Photo grid — first photo larger (most people), then 4 smaller */}
-              <div className="grid grid-cols-2 md:grid-cols-3 border-t border-white/5">
-                {/* First photo: full width mobile, spans 2 rows on desktop */}
-                <div className="col-span-2 md:col-span-1 md:[grid-row:span_2] relative aspect-[16/9] md:aspect-auto overflow-hidden group">
+              <div className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr] border-t border-white/5">
+                {/* First photo: full width mobile, left half + full height on desktop */}
+                <div className="col-span-2 md:col-span-1 md:row-span-2 relative aspect-[4/3] md:aspect-auto overflow-hidden group">
                   <Image
                     src={c.photos[0].src}
                     alt={c.photos[0].alt}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                 </div>
@@ -289,7 +289,7 @@ export default function CaseStudies() {
                       alt={photo.alt}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 50vw, 25vw"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
                   </div>
