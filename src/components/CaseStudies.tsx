@@ -23,10 +23,10 @@ const cases = [
       "28 finalist teams across four tracks at the AWS Hong Kong office. 021Lab put together the competition structure, handled submissions and judging, and ran the day.",
     heroImage: { src: "/images/hashkey/hk-10.jpg", alt: "Demo day presentations at HashKey Chain Horizon Hackathon" },
     stats: [
-      { value: "28", label: "Finalist Teams" },
-      { value: "145", label: "Demo Day Attendees" },
-      { value: "$40K", label: "USDT Prize Pool" },
-      { value: "4", label: "Tracks" },
+      { value: "60+", label: "Eco-Partners" },
+      { value: "220+", label: "Submissions" },
+      { value: "200K+", label: "Views on X" },
+      { value: "2", label: "Offline Events" },
     ],
     tracks: ["DeFi", "PayFi", "AI", "ZKID"],
     // 5 grid photos: most people, demo, socializing, audience, working
