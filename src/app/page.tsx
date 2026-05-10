@@ -252,7 +252,7 @@ export default function Home() {
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">About</motion.p>
           <motion.p variants={fadeUp} className="text-zinc-300 text-lg leading-relaxed">
-            021Lab is a lean, cross-timezone team — based across Asia and North America — that designs and runs hackathons for AI and Web3 ecosystems end to end. We&apos;ve operated events across multiple countries, built a 5,000-strong builder community spanning both regions, and move fast enough to go from brief to demo day without the usual overhead. We know the ecosystem, so clients don&apos;t have to explain it to us.
+            021Lab is a lean, cross-timezone team — based across Asia and North America — that designs and runs hackathons for AI and Web3 ecosystems end to end. We&apos;ve operated events across multiple countries, built a 5,000-strong builder community spanning five continents, and move fast enough to go from brief to demo day without the usual overhead. We&apos;ve been building in this space long enough that the networks, the context, and the judgment come with us.
           </motion.p>
         </motion.div>
       </section>
