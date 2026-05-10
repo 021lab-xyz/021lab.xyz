@@ -21,10 +21,10 @@ const cases = [
     ],
     tracks: ["DeFi", "PayFi", "AI", "ZKID"],
     photos: [
-      { src: "/images/hashkey/hk-02.jpg", alt: "Builders collaborating at HashKey Horizon" },
-      { src: "/images/hashkey/hk-15.jpg", alt: "Teams presenting on stage at Demo Day" },
+      { src: "/images/hashkey/hk-06.jpg", alt: "Teams at HashKey Horizon Hackathon" },
       { src: "/images/hashkey/hk-04.jpg", alt: "Winner teams at HashKey Horizon Hackathon" },
-      { src: "/images/hashkey/hk-01.jpg", alt: "Audience watching presentations" },
+      { src: "/images/hashkey/hk-14.jpg", alt: "Participants at HashKey Horizon Hackathon" },
+      { src: "/images/hashkey/hk-01.jpg", alt: "Audience watching demo day presentations" },
     ],
     partners: [
       { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false },
@@ -51,9 +51,9 @@ const cases = [
     ],
     tracks: ["DeFi", "RWA", "Consumer Apps", "Stablecoins", "Infrastructure", "Open"],
     photos: [
+      { src: "/images/solana/sol-09.jpg", alt: "Builders at Solar Mini Hacker House Singapore" },
       { src: "/images/solana/sol-13.jpg", alt: "Group photo at Solar Mini Hacker House" },
-      { src: "/images/solana/sol-08.jpg", alt: "Organizer team with 021Lab sign" },
-      { src: "/images/solana/sol-05.jpg", alt: "Demo presentation with Solar brand banner" },
+      { src: "/images/solana/sol-15.jpg", alt: "Networking at Solar Mini Hacker House" },
       { src: "/images/solana/sol-10.jpg", alt: "Full audience at Solar Mini Hacker House" },
     ],
     partners: [
