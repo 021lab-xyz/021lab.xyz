@@ -4,12 +4,11 @@ import { useState } from "react";
 
 type State = "idle" | "loading" | "success" | "error";
 
-const REGIONS = ["Asia", "North America", "Europe", "Latin America", "Middle East & Africa", "Other"];
 const FOCUS = ["AI", "Web3", "Both"];
 
 export default function BuilderSignup() {
   const [state, setState] = useState<State>("idle");
-  const [form, setForm] = useState({ email: "", telegram: "", region: "", primaryFocus: "" });
+  const [form, setForm] = useState({ email: "", telegram: "", country: "", primaryFocus: "" });
 
   function set(field: string, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -62,14 +61,13 @@ export default function BuilderSignup() {
         className={inputClass}
       />
       <div className="grid grid-cols-2 gap-3">
-        <select
-          value={form.region}
-          onChange={(e) => set("region", e.target.value)}
-          className={`${inputClass} appearance-none`}
-        >
-          <option value="" disabled>Region</option>
-          {REGIONS.map((r) => <option key={r} value={r}>{r}</option>)}
-        </select>
+        <input
+          type="text"
+          placeholder="Country"
+          value={form.country}
+          onChange={(e) => set("country", e.target.value)}
+          className={inputClass}
+        />
         <select
           value={form.primaryFocus}
           onChange={(e) => set("primaryFocus", e.target.value)}

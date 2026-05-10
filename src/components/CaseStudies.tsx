@@ -20,7 +20,7 @@ const cases = [
     title: "HashKey Chain Horizon Hackathon",
     subtitle: "DeFi · PayFi · AI · ZKID",
     description:
-      "28 finalist teams competed across four tracks at the AWS Hong Kong office. 021Lab designed the competition structure, managed submissions, coordinated the judge panel, and ran all day-of operations.",
+      "28 finalist teams across four tracks at the AWS Hong Kong office. 021Lab put together the competition structure, handled submissions and judging, and ran the day.",
     heroImage: { src: "/images/hashkey/hk-10.jpg", alt: "Demo day presentations at HashKey Chain Horizon Hackathon" },
     stats: [
       { value: "28", label: "Finalist Teams" },
@@ -74,7 +74,7 @@ const cases = [
     title: "Solar Mini Hacker House × 021Lab",
     subtitle: "Singapore 2026",
     description:
-      "A 2-day in-person hackathon co-organized with Solar (Solana's Chinese builder community), SafePal, and the Solana Foundation. 38 teams submitted projects — 25 demoed live on day two.",
+      "A 2-day in-person hackathon co-organized with Solar (Solana's Chinese builder community), SafePal, and the Solana Foundation. 38 teams submitted. 25 demoed live on day two.",
     heroImage: { src: "/images/solana/sol-16.jpg", alt: "Presenter at Solar Mini Hacker House Singapore" },
     stats: [
       { value: "155", label: "Registered" },

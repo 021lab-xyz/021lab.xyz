@@ -84,7 +84,7 @@ export default function Home() {
             </span>
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-8 text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            From track design and community outreach to running the room on demo day.
+            We handle the tracks, the outreach, and the room on demo day.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
             <a
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Full-Service Operations</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We own the event top to bottom — track design, submissions, marketing, judging, and the day itself. You show up to demo day.
+              We run the whole thing. Track design, submissions, marketing, judging, the day itself. You show up to demo day.
             </p>
           </motion.div>
 
@@ -166,7 +166,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Builder Distribution</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We bring our own community of 5,000+ AI and Web3 builders. These are people we know — not a rented list.
+              We bring our own community of 5,000+ AI and Web3 builders. People we know personally, not a rented list.
             </p>
           </motion.div>
 
@@ -178,7 +178,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Track & Prize Design</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We design the tracks, judging criteria, and prize structure. Get this wrong and you get weekend demos. Get it right and projects keep going after the event closes.
+              We design the tracks, judging criteria, and prize structure. Mess this up and you get weekend demos that go nowhere. Get it right and builders keep working long after the event wraps.
             </p>
           </motion.div>
         </motion.div>
@@ -203,7 +203,7 @@ export default function Home() {
               </span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-zinc-400 leading-relaxed text-lg mb-8">
-              Behind every event we run is a community of developers, founders, and researchers we&apos;ve built up over the years. Run a hackathon with us and they come with the deal.
+              We&apos;ve spent years building a community of developers, founders, and researchers. Run an event with us and that community shows up.
             </motion.p>
             <motion.div variants={fadeUp}>
               <BuilderSignup />
@@ -249,7 +249,7 @@ export default function Home() {
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">About</motion.p>
           <motion.p variants={fadeUp} className="text-zinc-300 text-lg leading-relaxed">
-            021Lab is a small team spread across Asia and North America. We run hackathons for AI and Web3 — from the first planning call to demo day. We&apos;ve put on events in multiple countries, grown a builder community of 5,000+ spanning five continents, and gotten fast at moving from brief to launch. We came up inside the space, not adjacent to it — the community and the relationships were there before the company had a name.
+            021Lab is a small team based across Asia and North America. We design and run hackathons for AI and Web3 builders, handling everything from the planning call to demo day. We&apos;ve put on events in multiple countries, grown a community of 5,000+ across five continents, and gotten pretty fast at all of it. We came up in this space. The community and the relationships were there before the company had a name.
           </motion.p>
         </motion.div>
       </section>
@@ -271,7 +271,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400"> next hackathon?</span>
             </h2>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
-              Tell us what you&apos;re building toward. We move fast.
+              Reach out. We respond fast.
             </p>
             <a
               href="mailto:hello@021lab.xyz?subject=Run a Hackathon with 021Lab"
