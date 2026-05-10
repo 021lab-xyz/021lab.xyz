@@ -168,7 +168,7 @@ export default function CaseStudies() {
 
   return (
     <>
-      <section id="hackathons" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
+      <section id="hackathons" className="px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-32 border-t border-white/5">
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -177,12 +177,12 @@ export default function CaseStudies() {
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</motion.p>
           <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-6">From Zero to Demo</motion.h2>
-          <motion.p variants={fadeUp} className="text-zinc-400 text-lg max-w-2xl mb-20">
+          <motion.p variants={fadeUp} className="text-zinc-400 text-lg max-w-2xl mb-10 md:mb-20">
             Every hackathon we run is a full production. Here&apos;s the work.
           </motion.p>
         </motion.div>
 
-        <div className="flex flex-col gap-20">
+        <div className="flex flex-col gap-12 md:gap-20">
           {cases.map((c, idx) => (
             <motion.div
               key={c.id}
@@ -194,7 +194,7 @@ export default function CaseStudies() {
             >
 
               {/* Header */}
-              <div className="px-8 md:px-10 pt-8 pb-6 flex flex-wrap items-center justify-between gap-3">
+              <div className="px-5 sm:px-8 md:px-10 pt-6 sm:pt-8 pb-5 sm:pb-6 flex flex-wrap items-center justify-between gap-3">
                 <div className="flex flex-wrap items-center gap-3">
                   <span className={`text-xs font-medium uppercase tracking-widest ${c.roleColor}`}>
                     {c.role}
@@ -220,7 +220,7 @@ export default function CaseStudies() {
               </div>
 
               {/* Title */}
-              <div className="px-8 md:px-10 pb-8">
+              <div className="px-5 sm:px-8 md:px-10 pb-6 sm:pb-8">
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight">{c.title}</h3>
                 <p className="text-zinc-500 text-sm mt-1">{c.subtitle}</p>
               </div>
@@ -237,7 +237,7 @@ export default function CaseStudies() {
                   />
                 </div>
 
-                <div className="bg-white/[0.02] border-l border-white/5 p-8 md:p-10 flex flex-col justify-between">
+                <div className="bg-white/[0.02] border-t md:border-t-0 md:border-l border-white/5 p-6 sm:p-8 md:p-10 flex flex-col justify-between">
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {c.stats.map((s) => (
                       <div key={s.label} className="border border-white/10 rounded-xl p-4">
@@ -304,7 +304,7 @@ export default function CaseStudies() {
               </div>
 
               {/* View all photos */}
-              <div className="px-8 md:px-10 py-4 border-t border-white/5 flex justify-end">
+              <div className="px-5 sm:px-8 md:px-10 py-4 border-t border-white/5 flex justify-end">
                 <button
                   onClick={() => setActiveGallery(c)}
                   className="text-xs text-zinc-500 hover:text-white transition-colors flex items-center gap-1.5"

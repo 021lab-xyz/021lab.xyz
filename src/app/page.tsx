@@ -76,14 +76,14 @@ export default function Home() {
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">
             AI + Web3 · Hackathon Studio
           </motion.p>
-          <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
+          <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
             We Build Hackathons
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-400 to-green-400">
               for AI + Web3.
             </span>
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-8 text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            021Lab designs and runs hackathons end to end — from track structure and submissions to demo day and prizes.
+            From track design and community outreach to running the room on demo day.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
             <a
@@ -127,7 +127,7 @@ export default function Home() {
       </motion.div>
 
       {/* What We Do */}
-      <section id="services" className="px-6 md:px-12 max-w-7xl mx-auto py-32">
+      <section id="services" className="px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-32">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -153,7 +153,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Full-Service Operations</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We handle the entire event — structure, submissions, marketing, judge coordination, and day-of operations. You define the goal; we deliver the hackathon.
+              We own the event top to bottom — track design, submissions, marketing, judging, and the day itself. You show up to demo day.
             </p>
           </motion.div>
 
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Builder Distribution</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We bring 5,000+ AI and Web3 builders from our own community. Your hackathon reaches real developers — not a generic mailing list.
+              We bring our own community of 5,000+ AI and Web3 builders. These are people we know — not a rented list.
             </p>
           </motion.div>
 
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Track & Prize Design</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We structure your tracks, judging criteria, and prize flow to attract serious builders and produce projects that ship beyond the event.
+              We design the tracks, judging criteria, and prize structure. Get this wrong and you get weekend demos. Get it right and projects keep going after the event closes.
             </p>
           </motion.div>
         </motion.div>
@@ -186,7 +186,7 @@ export default function Home() {
       <CaseStudies />
 
       {/* Builder Network */}
-      <section id="builders" className="px-6 md:px-12 max-w-7xl mx-auto py-32 border-t border-white/5">
+      <section id="builders" className="px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-32 border-t border-white/5">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div
             variants={stagger}
@@ -202,7 +202,7 @@ export default function Home() {
               </span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-zinc-400 leading-relaxed text-lg mb-8">
-              Behind every hackathon we run is a curated community of developers, founders, and researchers across Asia. When you run a hackathon with 021Lab, this is the audience you reach.
+              Behind every event we run is a community of developers, founders, and researchers we&apos;ve built up over the years. Run a hackathon with us and they come with the deal.
             </motion.p>
             <motion.a
               variants={fadeUp}
@@ -242,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section className="px-6 md:px-12 max-w-7xl mx-auto pb-32 border-t border-white/5 pt-20">
+      <section className="px-6 md:px-12 max-w-7xl mx-auto pt-12 pb-16 md:pt-20 md:pb-32 border-t border-white/5">
         <motion.div
           className="max-w-2xl"
           variants={stagger}
@@ -252,15 +252,15 @@ export default function Home() {
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">About</motion.p>
           <motion.p variants={fadeUp} className="text-zinc-300 text-lg leading-relaxed">
-            021Lab is a lean, cross-timezone team — based across Asia and North America — that designs and runs hackathons for AI and Web3 ecosystems end to end. We&apos;ve operated events across multiple countries, built a 5,000-strong builder community spanning five continents, and move fast enough to go from brief to demo day without the usual overhead. We&apos;ve been building in this space long enough that the networks, the context, and the judgment come with us.
+            021Lab is a small team spread across Asia and North America. We run hackathons for AI and Web3 — from the first planning call to demo day. We&apos;ve put on events in multiple countries, grown a builder community of 5,000+ spanning five continents, and gotten fast at moving from brief to launch. We came up inside the space, not adjacent to it — the community and the relationships were there before the company had a name.
           </motion.p>
         </motion.div>
       </section>
 
       {/* Contact */}
-      <section id="contact" className="px-6 md:px-12 max-w-7xl mx-auto py-32">
+      <section id="contact" className="px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-32">
         <motion.div
-          className="border border-white/10 rounded-3xl p-10 md:p-16 text-center relative overflow-hidden"
+          className="border border-white/10 rounded-3xl p-8 md:p-16 text-center relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -274,7 +274,7 @@ export default function Home() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400"> next hackathon?</span>
             </h2>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
-              Tell us about your project. We&apos;ll handle the rest.
+              Tell us what you&apos;re building toward. We move fast.
             </p>
             <a
               href="mailto:hello@021lab.xyz?subject=Run a Hackathon with 021Lab"
@@ -293,7 +293,7 @@ export default function Home() {
             &copy; {new Date().getFullYear()} 021Lab. All rights reserved.
           </div>
           <div className="text-xs text-zinc-700 hidden md:block">
-            Building the hackathon infrastructure for AI + Web3.
+            Running hackathons for the builders of AI + Web3.
           </div>
           <div className="flex gap-6 text-sm text-zinc-500">
             <a href="https://x.com/021labxyz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
