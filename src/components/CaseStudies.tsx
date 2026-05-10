@@ -27,7 +27,7 @@ const cases = [
       { src: "/images/hashkey/hk-01.jpg", alt: "Audience watching presentations" },
     ],
     partners: [
-      { name: "HashKey Chain", logo: null, invert: false },
+      { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false },
       { name: "AWS", logo: "/logos/aws.png", invert: false },
     ],
   },
