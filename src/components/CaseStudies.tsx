@@ -57,11 +57,11 @@ const cases = [
       { src: "/images/hashkey/hk-17.jpg", alt: "AWS speaker" },
     ],
     partners: [
-      { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false },
-      { name: "AWS", logo: "/logos/aws.png", invert: false },
-      { name: "DoraHacks", logo: null, invert: false },
-      { name: "EthAppsGuild", logo: null, invert: false },
-      { name: "HabitTrade", logo: null, invert: false },
+      { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false, screen: false },
+      { name: "AWS", logo: "/logos/aws.png", invert: false, screen: false },
+      { name: "DoraHacks", logo: null, invert: false, screen: false },
+      { name: "EthAppsGuild", logo: null, invert: false, screen: false },
+      { name: "HabitTrade", logo: null, invert: false, screen: false },
     ],
   },
   {
@@ -110,13 +110,13 @@ const cases = [
       { src: "/images/solana/sol-16.jpg", alt: "Presenter with brand banner" },
     ],
     partners: [
-      { name: "Solana", logo: "/logos/solana.svg", invert: false },
-      { name: "SafePal", logo: "/logos/safepal.png", invert: false },
-      { name: "OGBC", logo: null, invert: false },
-      { name: "BGA", logo: "/logos/bga.png", invert: false },
-      { name: "AWS", logo: "/logos/aws.png", invert: false },
-      { name: "Orbit AI", logo: "/logos/orbit.png", invert: true },
-      { name: "Elfa AI", logo: "/logos/elfa.png", invert: true },
+      { name: "Solana", logo: "/logos/solana.svg", invert: false, screen: false },
+      { name: "SafePal", logo: "/logos/safepal.png", invert: false, screen: false },
+      { name: "OGBC", logo: "/logos/ogbc.jpg", invert: false, screen: true },
+      { name: "BGA", logo: "/logos/bga.png", invert: false, screen: false },
+      { name: "AWS", logo: "/logos/aws.png", invert: false, screen: false },
+      { name: "Orbit AI", logo: "/logos/orbit.png", invert: true, screen: false },
+      { name: "Elfa AI", logo: "/logos/elfa.png", invert: true, screen: false },
     ],
   },
 ];
@@ -272,6 +272,7 @@ export default function CaseStudies() {
                               className="h-full w-auto object-contain max-w-[80px]"
                               style={{
                                 filter: p.invert ? "brightness(0) invert(1)" : undefined,
+                                mixBlendMode: p.screen ? "screen" : undefined,
                                 opacity: 0.8,
                               }}
                             />
