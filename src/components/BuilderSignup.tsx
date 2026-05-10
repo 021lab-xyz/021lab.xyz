@@ -9,9 +9,7 @@ const FOCUS = ["AI", "Web3", "Both"];
 
 export default function BuilderSignup() {
   const [state, setState] = useState<State>("idle");
-  const [form, setForm] = useState({
-    name: "", email: "", telegram: "", twitter: "", region: "", primaryFocus: "",
-  });
+  const [form, setForm] = useState({ email: "", telegram: "", region: "", primaryFocus: "" });
 
   function set(field: string, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
@@ -45,65 +43,42 @@ export default function BuilderSignup() {
   }
 
   const inputClass = "w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder:text-zinc-600 focus:outline-none focus:border-white/25 transition-colors";
-  const selectClass = `${inputClass} appearance-none`;
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-sm">
-      <div className="grid grid-cols-2 gap-3">
-        <input
-          type="text"
-          placeholder="Name"
-          value={form.name}
-          onChange={(e) => set("name", e.target.value)}
-          className={inputClass}
-        />
-        <input
-          type="email"
-          placeholder="Email *"
-          value={form.email}
-          onChange={(e) => set("email", e.target.value)}
-          required
-          className={inputClass}
-        />
-      </div>
-
-      <div className="grid grid-cols-2 gap-3">
-        <input
-          type="text"
-          placeholder="Telegram"
-          value={form.telegram}
-          onChange={(e) => set("telegram", e.target.value)}
-          className={inputClass}
-        />
-        <input
-          type="text"
-          placeholder="Twitter / X"
-          value={form.twitter}
-          onChange={(e) => set("twitter", e.target.value)}
-          className={inputClass}
-        />
-      </div>
-
+      <input
+        type="email"
+        placeholder="Email *"
+        value={form.email}
+        onChange={(e) => set("email", e.target.value)}
+        required
+        className={inputClass}
+      />
+      <input
+        type="text"
+        placeholder="Telegram (optional)"
+        value={form.telegram}
+        onChange={(e) => set("telegram", e.target.value)}
+        className={inputClass}
+      />
       <div className="grid grid-cols-2 gap-3">
         <select
           value={form.region}
           onChange={(e) => set("region", e.target.value)}
-          className={selectClass}
+          className={`${inputClass} appearance-none`}
         >
           <option value="" disabled>Region</option>
           {REGIONS.map((r) => <option key={r} value={r}>{r}</option>)}
         </select>
-
         <select
           value={form.primaryFocus}
           onChange={(e) => set("primaryFocus", e.target.value)}
-          className={selectClass}
+          className={`${inputClass} appearance-none`}
         >
           <option value="" disabled>AI / Web3</option>
           {FOCUS.map((f) => <option key={f} value={f}>{f}</option>)}
         </select>
       </div>
-
       <button
         type="submit"
         disabled={state === "loading" || !form.email}
@@ -111,7 +86,6 @@ export default function BuilderSignup() {
       >
         {state === "loading" ? "Joining..." : "Join the Builder Network"}
       </button>
-
       {state === "error" && (
         <p className="text-xs text-red-400">Something went wrong — email us at hello@021lab.xyz</p>
       )}
