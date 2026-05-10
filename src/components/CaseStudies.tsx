@@ -29,6 +29,9 @@ const cases = [
     partners: [
       { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false },
       { name: "AWS", logo: "/logos/aws.png", invert: false },
+      { name: "DoraHacks", logo: null, invert: false },
+      { name: "EthAppsGuild", logo: null, invert: false },
+      { name: "HabitTrade", logo: null, invert: false },
     ],
   },
   {
@@ -59,8 +62,11 @@ const cases = [
     partners: [
       { name: "Solana", logo: "/logos/solana.svg", invert: false },
       { name: "SafePal", logo: "/logos/safepal.png", invert: false },
-      { name: "MagicBlock", logo: "/logos/magicblock.svg", invert: false },
+      { name: "OGBC", logo: null, invert: false },
+      { name: "BGA", logo: "/logos/bga.png", invert: false },
       { name: "AWS", logo: "/logos/aws.png", invert: false },
+      { name: "Orbit AI", logo: "/logos/orbit.png", invert: true },
+      { name: "Elfa AI", logo: "/logos/elfa.png", invert: true },
     ],
   },
 ];
