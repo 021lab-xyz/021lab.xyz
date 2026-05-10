@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import CaseStudies from "@/components/CaseStudies";
+import BuilderSignup from "@/components/BuilderSignup";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 22 },
@@ -204,13 +205,9 @@ export default function Home() {
             <motion.p variants={fadeUp} className="text-zinc-400 leading-relaxed text-lg mb-8">
               Behind every event we run is a community of developers, founders, and researchers we&apos;ve built up over the years. Run a hackathon with us and they come with the deal.
             </motion.p>
-            <motion.a
-              variants={fadeUp}
-              href="mailto:hello@021lab.xyz?subject=Join the Builder Network"
-              className="inline-block border border-white/20 px-7 py-3 rounded-full text-sm font-medium hover:bg-white/5 transition-colors"
-            >
-              Join the Builder Network →
-            </motion.a>
+            <motion.div variants={fadeUp}>
+              <BuilderSignup />
+            </motion.div>
           </motion.div>
 
           <motion.div
