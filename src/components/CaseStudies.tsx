@@ -57,11 +57,10 @@ const cases = [
       { src: "/images/solana/sol-10.jpg", alt: "Full audience at Solar Mini Hacker House" },
     ],
     partners: [
-      { name: "Solana", logo: "/logos/solana.jpg", invert: true },
+      { name: "Solana", logo: "/logos/solana.svg", invert: false },
       { name: "SafePal", logo: "/logos/safepal.png", invert: false },
       { name: "MagicBlock", logo: "/logos/magicblock.svg", invert: false },
       { name: "AWS", logo: "/logos/aws.png", invert: false },
-      { name: "OGBC", logo: "/logos/ogbc.jpg", invert: true },
     ],
   },
 ];
