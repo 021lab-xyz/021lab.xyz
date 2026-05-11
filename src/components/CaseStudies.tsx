@@ -26,7 +26,7 @@ const cases = [
       { value: "60+", label: "Eco-Partners" },
       { value: "220+", label: "Submissions" },
       { value: "200K+", label: "Views on X" },
-      { value: "5", label: "4 AMAs + Demo Day" },
+      { value: "5", label: "Events" },
     ],
     tracks: ["DeFi", "PayFi", "AI", "ZKID"],
     // 5 grid photos: most people, demo, socializing, audience, working
