@@ -75,9 +75,9 @@ const cases = [
       "A 2-day in-person hackathon co-organized with Solar (Solana's Chinese builder community), SafePal, and the Solana Foundation. 38 teams submitted. 25 demoed live on day two.",
     heroImage: { src: "/images/solana/sol-16.jpg", alt: "Presenter at Solar Mini Hacker House Singapore" },
     stats: [
-      { value: "155", label: "Registered" },
-      { value: "38", label: "Teams Submitted" },
-      { value: "25", label: "Teams Demoed" },
+      { value: "50+", label: "Eco-Partners" },
+      { value: "38", label: "Submissions" },
+      { value: "136K", label: "Views on X" },
       { value: "2", label: "Days" },
     ],
     tracks: ["DeFi", "RWA", "Consumer Apps", "Stablecoins", "Infrastructure", "Open"],
