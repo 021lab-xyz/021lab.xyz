@@ -70,7 +70,7 @@ const cases = [
     location: "Singapore",
     recapUrl: "https://x.com/i/status/2053259310625403384",
     title: "Solar Mini Hacker House",
-    subtitle: "Singapore 2026",
+    subtitle: "Open Track",
     description:
       "A 2-day in-person hackathon co-organized with Solar (Solana's Chinese builder community), SafePal, and the Solana Foundation. 38 teams submitted. 25 demoed live on day two.",
     heroImage: { src: "/images/solana/sol-16.jpg", alt: "Presenter at Solar Mini Hacker House Singapore" },
