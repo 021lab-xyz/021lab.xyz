@@ -260,7 +260,7 @@ export default function CaseStudies() {
                             <img
                               src={p.logo}
                               alt={p.name}
-                              className="h-full w-auto object-contain max-w-[140px]"
+                              className="h-full w-auto object-contain max-w-[120px]"
                               style={{
                                 filter: p.invert ? "brightness(0) invert(1)" : undefined,
                                 mixBlendMode: p.screen ? "screen" : undefined,
