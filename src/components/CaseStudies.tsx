@@ -196,19 +196,6 @@ export default function CaseStudies() {
                   <span className="text-zinc-700">·</span>
                   <span className="text-xs text-zinc-500">{c.location}</span>
                 </div>
-                {c.recapUrl && (
-                  <a
-                    href={c.recapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-xs text-zinc-400 border border-white/10 rounded-full px-4 py-1.5 hover:border-white/25 hover:text-white transition-all"
-                  >
-                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                    Watch Recap
-                  </a>
-                )}
               </div>
 
               {/* Title */}
@@ -218,15 +205,45 @@ export default function CaseStudies() {
 
               {/* Hero image + details */}
               <div className="grid md:grid-cols-[3fr_2fr]">
-                <div className="relative aspect-[4/3] md:aspect-auto">
-                  <Image
-                    src={c.heroImage.src}
-                    alt={c.heroImage.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 60vw"
-                  />
-                </div>
+                {c.recapUrl ? (
+                  <a
+                    href={c.recapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative aspect-[4/3] md:aspect-auto group block overflow-hidden"
+                    aria-label={`Watch ${c.title} recap`}
+                  >
+                    <Image
+                      src={c.heroImage.src}
+                      alt={c.heroImage.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                    />
+                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/10 backdrop-blur-md border border-white/30 flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
+                        <svg className="w-6 h-6 md:w-7 md:h-7 text-white translate-x-0.5" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M8 5v14l11-7z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 flex items-center gap-2 text-xs uppercase tracking-widest text-white/80">
+                      <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
+                      Watch Recap
+                    </div>
+                  </a>
+                ) : (
+                  <div className="relative aspect-[4/3] md:aspect-auto">
+                    <Image
+                      src={c.heroImage.src}
+                      alt={c.heroImage.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 60vw"
+                    />
+                  </div>
+                )}
 
                 <div className="bg-white/[0.02] border-t md:border-t-0 md:border-l border-white/5 p-6 sm:p-8 md:p-10 flex flex-col justify-between">
                   <div className="grid grid-cols-2 gap-4 mb-8">
