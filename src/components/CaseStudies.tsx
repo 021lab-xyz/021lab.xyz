@@ -19,10 +19,10 @@ const cases = [
     recapUrl: "https://x.com/i/status/2049006918107341292",
     title: "HashKey Chain Horizon Hackathon",
     description:
-      "Over 44 days, 021Lab ran 4 online AMAs and drew 450+ registered developers. AI + human judging narrowed submissions to 28 finalists for demo day at AWS Hong Kong.",
+      "Over 44 days, 021Lab ran 4 online AMAs and recruited 450+ developers globally. AI + human judging narrowed projects to 28 finalists at AWS Hong Kong's demo day, with 12 winning teams.",
     heroImage: { src: "/images/hashkey/hk-10.jpg", alt: "Demo day presentations at HashKey Chain Horizon Hackathon" },
     stats: [
-      { value: "60+", label: "Eco-Partners" },
+      { value: "67", label: "Eco-Partners" },
       { value: "220+", label: "Submissions" },
       { value: "200K+", label: "Views on X" },
       { value: "5", label: "Events" },
@@ -70,10 +70,10 @@ const cases = [
     recapUrl: "https://x.com/i/status/2053259310625403384",
     title: "Solar Mini Hacker House",
     description:
-      "A 2-day in-person hackathon in Singapore, partnered with Solana Foundation and SafePal. 38 teams submitted projects; 25 demoed live on day two.",
+      "A 2-day in-person hackathon in Singapore for Solana Foundation and Solar. 25 teams demoed live on day two, with 10 winning teams.",
     heroImage: { src: "/images/solana/sol-16.jpg", alt: "Presenter at Solar Mini Hacker House Singapore" },
     stats: [
-      { value: "50+", label: "Eco-Partners" },
+      { value: "55", label: "Eco-Partners" },
       { value: "38", label: "Submissions" },
       { value: "136K", label: "Views on X" },
       { value: "2", label: "Days" },
