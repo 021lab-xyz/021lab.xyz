@@ -18,9 +18,8 @@ const cases = [
     location: "Hong Kong",
     recapUrl: "https://x.com/i/status/2049006918107341292",
     title: "HashKey Chain Horizon Hackathon",
-    subtitle: "DeFi · PayFi · AI · ZKID",
     description:
-      "28 finalist teams across four tracks at the AWS Hong Kong office. 021Lab put together the competition structure, handled submissions and judging, and ran the day.",
+      "220+ projects submitted across 4 tracks, narrowed to 28 finalist teams pitching live at AWS Hong Kong on demo day. 021Lab structured the competition, ran submissions and judging, and operated the event.",
     heroImage: { src: "/images/hashkey/hk-10.jpg", alt: "Demo day presentations at HashKey Chain Horizon Hackathon" },
     stats: [
       { value: "60+", label: "Eco-Partners" },
@@ -65,14 +64,13 @@ const cases = [
   {
     id: "solana",
     role: "Organized by 021Lab",
-    roleColor: "text-emerald-400",
+    roleColor: "text-green-400",
     date: "April 2026",
     location: "Singapore",
     recapUrl: "https://x.com/i/status/2053259310625403384",
     title: "Solar Mini Hacker House",
-    subtitle: "Open Track",
     description:
-      "A 2-day in-person hackathon co-organized with Solar (Solana's Chinese builder community), SafePal, and the Solana Foundation. 38 teams submitted. 25 demoed live on day two.",
+      "A 2-day in-person hackathon in Singapore, partnered with Solana Foundation and SafePal. 38 teams submitted projects; 25 demoed live on day two.",
     heroImage: { src: "/images/solana/sol-16.jpg", alt: "Presenter at Solar Mini Hacker House Singapore" },
     stats: [
       { value: "50+", label: "Eco-Partners" },
@@ -80,7 +78,7 @@ const cases = [
       { value: "136K", label: "Views on X" },
       { value: "2", label: "Days" },
     ],
-    tracks: ["DeFi", "RWA", "Consumer Apps", "Stablecoins", "Infrastructure", "Open"],
+    tracks: ["Open Track"],
     // 5 grid photos: most people, demo, socializing, audience, working
     photos: [
       { src: "/images/solana/sol-09.jpg", alt: "Builders at Solar Mini Hacker House Singapore" },
@@ -216,7 +214,6 @@ export default function CaseStudies() {
               {/* Title */}
               <div className="px-5 sm:px-8 md:px-10 pb-6 sm:pb-8">
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight">{c.title}</h3>
-                <p className="text-zinc-500 text-sm mt-1">{c.subtitle}</p>
               </div>
 
               {/* Hero image + details */}
