@@ -140,45 +140,58 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
           variants={stagger}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
         >
-          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
             <div className="mb-5">
               <svg className="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-3">Full-Service Operations</h3>
-            <p className="text-zinc-400 leading-relaxed text-sm">
-              We run the whole thing. Track design, submissions, marketing, judging, the day itself. You show up to demo day.
-            </p>
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
-            <div className="mb-5">
-              <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Builder Distribution</h3>
+            <h3 className="text-xl font-semibold mb-3">Builder Recruitment</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We bring our own community of 5,000+ AI and Web3 builders. People we know personally, not a rented list.
+              We bring developers from our 5,000+ AI and Web3 community, plus media, university, and partner channels across Asia. Real builders, not a rented list.
             </p>
           </motion.div>
 
-          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8 md:p-10">
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
             <div className="mb-5">
-              <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" />
               </svg>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Track & Prize Design</h3>
+            <h3 className="text-xl font-semibold mb-3">Program Design</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We design the tracks, judging criteria, and prize structure. Mess this up and you get weekend demos that go nowhere. Get it right and builders keep working long after the event wraps.
+              Tracks, judging criteria, prizes. Get this wrong and you get weekend demos. Get it right and builders keep working long after the event wraps.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
+            <div className="mb-5">
+              <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Event Operations</h3>
+            <p className="text-zinc-400 leading-relaxed text-sm">
+              Online AMAs, demo days, registration, judging logistics, marketing. We run every part of the event so you can focus on the work you&apos;re trying to fund.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
+            <div className="mb-5">
+              <svg className="w-7 h-7 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Content & Creative</h3>
+            <p className="text-zinc-400 leading-relaxed text-sm">
+              Photo, video, design materials, and content production across the full event. The hackathon ends but your brand assets live on for the next program.
             </p>
           </motion.div>
         </motion.div>
