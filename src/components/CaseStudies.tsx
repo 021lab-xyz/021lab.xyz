@@ -66,10 +66,10 @@ const cases = [
     id: "solana",
     role: "Organized by 021Lab",
     roleColor: "text-emerald-400",
-    date: "April 28–29, 2026",
+    date: "April 2026",
     location: "Singapore",
     recapUrl: "https://x.com/i/status/2053259310625403384",
-    title: "Solar Mini Hacker House × 021Lab",
+    title: "Solar Mini Hacker House",
     subtitle: "Singapore 2026",
     description:
       "A 2-day in-person hackathon co-organized with Solar (Solana's Chinese builder community), SafePal, and the Solana Foundation. 38 teams submitted. 25 demoed live on day two.",
