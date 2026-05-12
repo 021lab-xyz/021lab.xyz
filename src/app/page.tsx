@@ -24,7 +24,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
-          <a href="#" className="text-xl font-bold tracking-tight">021Lab</a>
+          <a href="#" className="flex items-center">
+            <img src="/logo.png" alt="021Lab" className="h-7 w-auto" />
+          </a>
 
           <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
             <a href="#hackathons" className="hover:text-white transition-colors">Hackathons</a>
