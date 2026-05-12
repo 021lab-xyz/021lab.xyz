@@ -64,7 +64,7 @@ const cases = [
   },
   {
     id: "solana",
-    role: "Co-Organizer",
+    role: "Organized by 021Lab",
     roleColor: "text-emerald-400",
     date: "April 28–29, 2026",
     location: "Singapore",
