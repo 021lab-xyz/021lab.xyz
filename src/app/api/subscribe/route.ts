@@ -30,7 +30,6 @@ export async function POST(req: NextRequest) {
         Country: country || "",
         "Primary Focus": primaryFocus || "",
         Source: "website",
-        Subscribed: true,
       },
     }),
   });
