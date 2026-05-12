@@ -19,7 +19,7 @@ const cases = [
     recapUrl: "https://x.com/i/status/2049006918107341292",
     title: "HashKey Chain Horizon Hackathon",
     description:
-      "A 44-day hackathon across DeFi, PayFi, AI, and ZKID, drawing 450+ developers globally. 021Lab designed the program, ran AI + human judging to narrow 220+ submissions to 28 finalists, and operated demo day at AWS Hong Kong with awards at Web3 Festival.",
+      "Over 44 days, 021Lab ran 4 online AMAs and drew 450+ registered developers. AI + human judging narrowed submissions to 28 finalists for demo day at AWS Hong Kong.",
     heroImage: { src: "/images/hashkey/hk-10.jpg", alt: "Demo day presentations at HashKey Chain Horizon Hackathon" },
     stats: [
       { value: "60+", label: "Eco-Partners" },
