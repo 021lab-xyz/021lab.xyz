@@ -55,7 +55,7 @@ export default function BuilderSignup() {
       />
       <input
         type="text"
-        placeholder="Telegram (optional)"
+        placeholder="Telegram — how we reach you about events"
         value={form.telegram}
         onChange={(e) => set("telegram", e.target.value)}
         className={inputClass}
