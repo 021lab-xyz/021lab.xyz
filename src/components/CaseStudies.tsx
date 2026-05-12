@@ -58,7 +58,7 @@ const cases = [
     partners: [
       { name: "HashKey Chain", logo: "/logos/hashkey.png", invert: false, screen: false },
       { name: "AWS", logo: "/logos/aws.png", invert: false, screen: false },
-      { name: "DoraHacks", logo: null, invert: false, screen: false },
+      { name: "DoraHacks", logo: "/logos/dorahacks.png", invert: false, screen: false },
     ],
   },
   {
@@ -106,7 +106,7 @@ const cases = [
       { src: "/images/solana/sol-16.jpg", alt: "Presenter with brand banner" },
     ],
     partners: [
-      { name: "Solana", logo: "/logos/solana.svg", invert: false, screen: false },
+      { name: "Solana", logo: "/logos/solana.png", invert: false, screen: false },
       { name: "SafePal", logo: "/logos/safepal.png", invert: false, screen: false },
       { name: "AWS", logo: "/logos/aws.png", invert: false, screen: false },
     ],
@@ -260,7 +260,7 @@ export default function CaseStudies() {
                             <img
                               src={p.logo}
                               alt={p.name}
-                              className="h-full w-auto object-contain max-w-[80px]"
+                              className="h-full w-auto object-contain max-w-[140px]"
                               style={{
                                 filter: p.invert ? "brightness(0) invert(1)" : undefined,
                                 mixBlendMode: p.screen ? "screen" : undefined,
