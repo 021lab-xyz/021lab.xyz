@@ -1,8 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
+
+declare global {
+  interface Window {
+    twttr?: { widgets: { load: (el?: HTMLElement) => void } };
+  }
+}
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 22 },
@@ -115,6 +121,64 @@ const cases = [
 
 type Case = typeof cases[0];
 
+function VideoModal({ c, onClose }: { c: Case; onClose: () => void }) {
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handler);
+    document.body.style.overflow = "hidden";
+
+    if (window.twttr?.widgets) {
+      window.twttr.widgets.load();
+    } else if (!document.querySelector('script[src="https://platform.twitter.com/widgets.js"]')) {
+      const s = document.createElement("script");
+      s.src = "https://platform.twitter.com/widgets.js";
+      s.async = true;
+      document.body.appendChild(s);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handler);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 bg-black/95 overflow-y-auto flex items-start md:items-center justify-center"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-xl mx-auto px-4 py-8"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb-6">
+          <h3 className="text-lg font-semibold text-white">{c.title} — Recap</h3>
+          <button
+            onClick={onClose}
+            className="w-10 h-10 flex items-center justify-center rounded-full border border-white/20 text-zinc-400 hover:text-white hover:border-white/40 transition-all text-xl"
+            aria-label="Close"
+          >
+            ×
+          </button>
+        </div>
+        <div className="bg-black rounded-2xl overflow-hidden min-h-[400px] flex items-center justify-center">
+          <blockquote
+            key={c.id}
+            className="twitter-tweet"
+            data-theme="dark"
+            data-conversation="none"
+            data-dnt="true"
+          >
+            <a href={c.recapUrl ?? ""}>Loading recap…</a>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Lightbox({ c, onClose }: { c: Case; onClose: () => void }) {
   return (
     <div
@@ -157,6 +221,7 @@ function Lightbox({ c, onClose }: { c: Case; onClose: () => void }) {
 
 export default function CaseStudies() {
   const [activeGallery, setActiveGallery] = useState<Case | null>(null);
+  const [activeVideo, setActiveVideo] = useState<Case | null>(null);
 
   return (
     <>
@@ -206,11 +271,10 @@ export default function CaseStudies() {
               {/* Hero image + details */}
               <div className="grid md:grid-cols-[3fr_2fr]">
                 {c.recapUrl ? (
-                  <a
-                    href={c.recapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative aspect-[4/3] md:aspect-auto group block overflow-hidden"
+                  <button
+                    type="button"
+                    onClick={() => setActiveVideo(c)}
+                    className="relative aspect-[4/3] md:aspect-auto group block overflow-hidden text-left w-full cursor-pointer"
                     aria-label={`Watch ${c.title} recap`}
                   >
                     <Image
@@ -232,7 +296,7 @@ export default function CaseStudies() {
                       <span className="w-1.5 h-1.5 rounded-full bg-red-400 animate-pulse" />
                       Watch Recap
                     </div>
-                  </a>
+                  </button>
                 ) : (
                   <div className="relative aspect-[4/3] md:aspect-auto">
                     <Image
@@ -332,6 +396,9 @@ export default function CaseStudies() {
 
       {activeGallery && (
         <Lightbox c={activeGallery} onClose={() => setActiveGallery(null)} />
+      )}
+      {activeVideo && (
+        <VideoModal c={activeVideo} onClose={() => setActiveVideo(null)} />
       )}
     </>
   );
