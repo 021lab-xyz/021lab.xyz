@@ -255,8 +255,9 @@ export default function Home() {
           viewport={{ once: true, margin: "-60px" }}
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">About</motion.p>
+          <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold tracking-tight mb-6">We came up in this space.</motion.h2>
           <motion.p variants={fadeUp} className="text-zinc-300 text-lg leading-relaxed">
-            021Lab is a small team based across Asia and North America. We design and run hackathons for AI and Web3 builders, handling everything from the planning call to demo day. We&apos;ve put on events in multiple countries, grown a community of 5,000+ across five continents, and gotten pretty fast at all of it. We came up in this space. The community and the relationships were there before the company had a name.
+            021Lab is a small studio based in Singapore, working across Asia and North America. We grew a community of 5,000+ builders across five continents, and we run the growth, events, and hackathons that put early-stage AI and Web3 startups in front of them. Along the way we&apos;ve run events in multiple countries and gotten fast at all of it. The community and the relationships were here before the company had a name.
           </motion.p>
         </motion.div>
       </section>
