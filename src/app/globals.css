@@ -76,3 +76,21 @@ html {
 .animate-delay-2 { animation-delay: 0.2s; }
 .animate-delay-3 { animation-delay: 0.3s; }
 .animate-delay-4 { animation-delay: 0.4s; }
+
+/* World map markers */
+.worldmap-dot {
+  fill: #4ade80;
+  stroke: rgba(4, 16, 9, 0.55);
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: transform 0.18s ease, filter 0.18s ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.worldmap-dot:hover {
+  transform: scale(1.5);
+  filter: brightness(1.25) drop-shadow(0 0 5px rgba(74, 222, 128, 0.85));
+}
+@media (prefers-reduced-motion: reduce) {
+  .worldmap-dot { transition: none; }
+}

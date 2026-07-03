@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 import CaseStudies from "@/components/CaseStudies";
 import BuilderSignup from "@/components/BuilderSignup";
+import WorldMap from "@/components/WorldMap";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 22 },
@@ -192,6 +193,25 @@ export default function Home() {
       </section>
 
       <CaseStudies />
+
+      {/* Network map */}
+      <section className="px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-32 border-t border-white/5">
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-80px" }}
+        >
+          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Our Network</motion.p>
+          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Partners across 26 countries.</motion.h2>
+          <motion.p variants={fadeUp} className="text-zinc-400 text-lg max-w-2xl mb-12">
+            Media, university, and builder communities on six continents. Hover a marker to see the count.
+          </motion.p>
+          <motion.div variants={fadeUp}>
+            <WorldMap />
+          </motion.div>
+        </motion.div>
+      </section>
 
       {/* Builder Network */}
       <section id="builders" className="px-6 md:px-12 max-w-7xl mx-auto py-16 md:py-32 border-t border-white/5">
