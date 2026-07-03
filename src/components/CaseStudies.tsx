@@ -235,7 +235,7 @@ export default function CaseStudies() {
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Track Record</motion.p>
           <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-6">From Zero to Demo</motion.h2>
           <motion.p variants={fadeUp} className="text-zinc-400 text-lg max-w-2xl mb-10 md:mb-20">
-            Every hackathon we run is a full production. Here&apos;s the work.
+            Hackathons are where we go deepest. Here&apos;s the work.
           </motion.p>
         </motion.div>
 

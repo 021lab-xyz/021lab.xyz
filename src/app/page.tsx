@@ -29,7 +29,8 @@ export default function Home() {
           </a>
 
           <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-            <a href="#hackathons" className="hover:text-white transition-colors">Hackathons</a>
+            <a href="#services" className="hover:text-white transition-colors">Services</a>
+            <a href="#hackathons" className="hover:text-white transition-colors">Work</a>
             <a href="#builders" className="hover:text-white transition-colors">For Builders</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
           </div>
@@ -38,7 +39,7 @@ export default function Home() {
             href="#contact"
             className="hidden md:inline-block text-sm bg-white text-black px-5 py-2 rounded-full font-medium hover:bg-zinc-200 transition-colors"
           >
-            Run a Hackathon →
+            Work with us →
           </a>
 
           <button
@@ -54,10 +55,11 @@ export default function Home() {
 
         {mobileOpen && (
           <div className="md:hidden bg-[#0a0a0a] border-t border-white/5 px-6 py-5 flex flex-col gap-5 text-sm">
-            <a href="#hackathons" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white transition-colors">Hackathons</a>
+            <a href="#services" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white transition-colors">Services</a>
+            <a href="#hackathons" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white transition-colors">Work</a>
             <a href="#builders" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white transition-colors">For Builders</a>
             <a href="#about" onClick={() => setMobileOpen(false)} className="text-zinc-400 hover:text-white transition-colors">About</a>
-            <a href="#contact" onClick={() => setMobileOpen(false)} className="text-white font-medium">Run a Hackathon →</a>
+            <a href="#contact" onClick={() => setMobileOpen(false)} className="text-white font-medium">Work with us →</a>
           </div>
         )}
       </nav>
@@ -77,23 +79,23 @@ export default function Home() {
           animate="show"
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-6">
-            AI + Web3 · Hackathon Studio
+            AI + Web3 · Studio
           </motion.p>
           <motion.h1 variants={fadeUp} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] tracking-tight max-w-5xl">
-            We Build Hackathons
+            Growth, events, and hackathons
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-400 to-green-400">
               for AI + Web3.
             </span>
           </motion.h1>
           <motion.p variants={fadeUp} className="mt-8 text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
-            We handle the tracks, the outreach, and the room on demo day.
+            021Lab helps early-stage startups get seen, get builders in the room, and get moving.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-12 flex flex-wrap gap-4">
             <a
               href="#contact"
               className="bg-white text-black px-8 py-3.5 rounded-full text-sm font-medium hover:bg-zinc-200 transition-colors"
             >
-              Run a Hackathon →
+              Work with us →
             </a>
             <a
               href="#builders"
@@ -138,62 +140,52 @@ export default function Home() {
           viewport={{ once: true, margin: "-80px" }}
         >
           <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">What We Do</motion.p>
-          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-16">How We Work</motion.h2>
+          <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-bold tracking-tight mb-16">Three ways we help you grow.</motion.h2>
         </motion.div>
 
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid md:grid-cols-3 gap-6"
           variants={stagger}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
         >
           <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
-            <div className="mb-5">
+            <div className="mb-5 flex items-center gap-3">
               <svg className="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 17l6-6 4 4 8-8M15 7h6v6" />
               </svg>
+              <span className="text-xs font-mono uppercase tracking-widest text-zinc-600">01</span>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Builder & Partner Recruitment</h3>
+            <h3 className="text-xl font-semibold mb-3">Growth</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              We bring developers from our 5,000+ AI and Web3 community, plus media, university, and partner channels across Asia. Real builders, not a rented list.
+              Content, social, and PR that build real presence in the AI and Web3 community. We manage your channels and produce work that gets shared.
             </p>
           </motion.div>
 
           <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
-            <div className="mb-5">
+            <div className="mb-5 flex items-center gap-3">
               <svg className="w-7 h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span className="text-xs font-mono uppercase tracking-widest text-zinc-600">02</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Events</h3>
+            <p className="text-zinc-400 leading-relaxed text-sm">
+              Meetups and side events with venue, speakers, catering, and promotion handled for you. You bring the reason to gather.
+            </p>
+          </motion.div>
+
+          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
+            <div className="mb-5 flex items-center gap-3">
+              <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 8l-4 4 4 4M17 8l4 4-4 4M14 4l-4 16" />
               </svg>
+              <span className="text-xs font-mono uppercase tracking-widest text-zinc-600">03</span>
             </div>
-            <h3 className="text-xl font-semibold mb-3">Program Design</h3>
+            <h3 className="text-xl font-semibold mb-3">Hackathons</h3>
             <p className="text-zinc-400 leading-relaxed text-sm">
-              Tracks, judging criteria, prizes. Get this wrong and you get weekend demos. Get it right and builders keep working long after the event wraps.
-            </p>
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
-            <div className="mb-5">
-              <svg className="w-7 h-7 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-3">Event Operations</h3>
-            <p className="text-zinc-400 leading-relaxed text-sm">
-              Online AMAs, demo days, registration, judging logistics, marketing. We run every part of the event so you can focus on the work you&apos;re trying to fund.
-            </p>
-          </motion.div>
-
-          <motion.div variants={fadeUp} className="service-card border border-white/10 rounded-2xl p-8">
-            <div className="mb-5">
-              <svg className="w-7 h-7 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-3">Content & Creative</h3>
-            <p className="text-zinc-400 leading-relaxed text-sm">
-              Photo, video, design materials, and content production across the full event. The hackathon ends but your brand assets live on for the next program.
+              Full hackathon operation. We recruit the developers, design the tracks and prizes, and run demo day. Our flagship.
             </p>
           </motion.div>
         </motion.div>
@@ -282,14 +274,14 @@ export default function Home() {
           <div className="relative">
             <p className="text-sm uppercase tracking-[0.3em] text-zinc-500 mb-4">Get Started</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Ready to run your
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400"> next hackathon?</span>
+              Tell us what
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-emerald-400"> you&apos;re launching.</span>
             </h2>
             <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-10">
               Reach out. We respond fast.
             </p>
             <a
-              href="mailto:hello@021lab.xyz?subject=Run a Hackathon with 021Lab"
+              href="mailto:hello@021lab.xyz?subject=Working with 021Lab"
               className="inline-block bg-white text-black px-10 py-4 rounded-full text-sm font-medium hover:bg-zinc-200 transition-colors"
             >
               hello@021lab.xyz
@@ -305,7 +297,7 @@ export default function Home() {
             &copy; {new Date().getFullYear()} 021Lab. All rights reserved.
           </div>
           <div className="text-xs text-zinc-700 hidden md:block">
-            Running hackathons for the builders of AI + Web3.
+            Growth, events, and hackathons for AI + Web3.
           </div>
           <div className="flex gap-6 text-sm text-zinc-500">
             <a href="https://x.com/021labxyz" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
